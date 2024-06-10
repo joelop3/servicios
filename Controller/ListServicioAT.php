@@ -167,6 +167,7 @@ class ListServicioAT extends ListController
             ->addSearchFields(['descripcion', 'observaciones', 'referencia'])
             ->addFilterSelect('nick', 'user', 'nick', $users)
             ->addFilterSelect('codagente', 'agent', 'codagente', $agents)
+            ->addFilterPeriod($viewName, 'fechainicio', 'date', 'fechainicio')
             ->setSettings('btnDelete', false)
             ->setSettings('btnNew', false);
     }
